@@ -3,11 +3,11 @@ This Dockerfile provides a build environment for the **Prophesee EVALUATION KIT 
 
 ## Dependencies
 
-- [Docker](https://www.docker.com/products/docker-desktop/)(to run the container)
+- [Docker](https://www.docker.com/products/docker-desktop/) (to run the container)
 - **USB access** (for camera communication)
 
 ### **X11 Display Server** (to display GUI applications)
-#### For Linux ( ubuntu 20.04 )
+#### For Linux (ubuntu 20.04)
 ##### Install X11 packages (if not already installed)
   ```bash
   sudo apt-get update
