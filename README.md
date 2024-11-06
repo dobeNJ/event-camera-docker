@@ -45,4 +45,6 @@ This command will give you an interactive shell inside the container. You can th
 ```bash
 sudo docker run -it --rm --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" --privileged --device /dev/bus/usb:/dev/bus/usb custom-event-camera-image /bin/bash
 ```
-
+```bash
+sudo docker run -it --rm --name test2 --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw"  --volume /Documents/Event-analysis/Camera:/workspace--privileged --device /dev/bus/usb:/dev/bus/usb custom-event-camera-image /bin/bash
+```
