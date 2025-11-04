@@ -17,3 +17,75 @@ desc.add_options()
     ("max-rate",  ...)   // max event rate limit [kev/s]
     ("output,o",  ...)   // path of recording file (data.raw by default)
     ("roi,r",     ...)   // hardware ROI: x y width height
+
+Bias file : 
+in prohesee event camera each pixel is a circuit that decide when to fire an event based on local contrast changes
+
+To control how that circuit behaves (recording condition ) , the camera hardware exposes a set of analog bias parameters 
+
+example of .bias file : 
+subsystem_ID 2415920387
+% system_ID 21
+300        %   bias_latchout_or_pu       %   v    
+100        %   bias_reqx_or_pu           %   v    
+1200       %   bias_req_pux              %   v    
+1300       %   bias_req_puy              %   v    
+500        %   bias_del_reqx_or          %   v    
+800        %   bias_sendreq_pdx          %   v    
+500        %   bias_sendreq_pdy          %   v    
+400        %   bias_del_ack_array        %   v    
+200        %   bias_del_timeout          %   v    
+400        %   bias_inv                  %   v    
+1500       %   bias_refr                 %   v    
+500        %   bias_clk                  %   v    
+1800       %   bias_hpf                  %   v    
+430        %   bias_tail                 %   i    
+230        %   bias_out                  %   i    
+370        %   bias_hyst                 %   i    
+1400       %   bias_vrefl                %   v    
+1700       %   bias_vrefh                %   v    
+1000       %   bias_cas                  %   v    
+230        %   bias_diff_off             %   v    
+390        %   bias_diff_on              %   v    
+300        %   bias_diff                 %   v    
+1720       %   bias_fo                   %   v    
+1500       %   bias_pr                   %   v    
+1500       %   bias_bulk                 %   v    
+1600       %   bias_overflow             %   v    
+200        %   bias_buf                  %   v    
+
+A set up Bias exist in /usr/share/prophesee_driver/biases
+.calib and more bias file exist in /usr/share/prophesee_driver/biasgen
+
+
+prophesee_raw_info ::>>
+====================================================================================================
+
+Name                data.raw
+Path                /usr/share/prophesee_driver/samples/data.raw
+Duration            1s 832ms 681us 
+Event encoding      EVT2
+Camera generation   3.0
+Camera systemID     21
+Camera subsystemID  2415920387
+Camera serial       00002427
+
+====================================================================================================
+
+Type of event       Number of events    First timestamp     Last timestamp      Average event rate  
+----------------------------------------------------------------------------------------------------
+CD                  260108              47                  1832681             141.9 Kev/s         
+EM                  13783               0                   1832641             7.5 Kev/s           
+
+
+prophesee_raw_to_data ::>>
+
+
+
+
+command line linux : 
+Creat .py file : touch filename.py
+rename file : mv presentname.txt newname.txt
+modify file : nano filename
+
+
