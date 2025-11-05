@@ -95,5 +95,7 @@ docker ps -a : list all the images and container ( to verify  )
 docker run : cr eat a new cntaine 
 docker exec -it container_name/ID /bin/bash
 docker restart container_name/ID ( necessary so that the container detect new devices pluged in  )
+Ctrl+P followed by Ctrl+Q. This operation detaches the container and allows you to return to your system's shell.
+
 
 
