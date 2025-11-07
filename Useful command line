@@ -88,6 +88,11 @@ Creat .py file : touch filename.py
 rename file : mv presentname.txt newname.txt
 modify file : nano filename
 
+command line env python :
+creat env : 
+delete /remove env : sudo rm -rf v2e
+python -m venv /path/to/new/virtual/environment
+
 commande line docker 
 
 docker ps : list all the runing container  (id -name ... )
