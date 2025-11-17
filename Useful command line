@@ -7,7 +7,7 @@ prophesee_raw_info
 prophesee_raw_to_dat
 
 
-press space bar to start recording usign prophesse_viewer exec file , there is a command line option --output( or -o)
+press space bar to start recording usign prophesse_viewer exec fcd ile , there is a command line option --output( or -o)
 default value is ( filename_to_log_into = "data.raw" ) 
 other option : 
 desc.add_options()
@@ -87,12 +87,17 @@ command line linux :
 Creat .py file : touch filename.py
 rename file : mv presentname.txt newname.txt
 modify file : nano filename
+Zip all files in the current directory : zip zip_file_name.zip
+
+---------------------------------------------------------------------------------------------------
 
 command line env python :
 creat env : 
 delete /remove env : sudo rm -rf v2e
 python -m venv /path/to/new/virtual/environment
 
+
+-----------------------------------------------------------------------------------------------------
 commande line docker 
 
 docker ps : list all the runing container  (id -name ... )
@@ -101,6 +106,7 @@ docker run : cr eat a new cntaine
 docker exec -it container_name/ID /bin/bash
 docker restart container_name/ID ( necessary so that the container detect new devices pluged in  )
 Ctrl+P followed by Ctrl+Q. This operation detaches the container and allows you to return to your system's shell.
-
+copy a file from a container to the host: 
+ ---> sudo docker cp <containerId>:/file/path/within/container /host/path/target
 
 
