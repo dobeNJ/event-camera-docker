@@ -87,7 +87,7 @@ command line linux :
 Creat .py file : touch filename.py
 rename file : mv presentname.txt newname.txt
 modify file : nano filename
-Zip all files in the current directory : zip zip_file_name.zip
+Zip all files in the current directory : zip zip_file_name.zip *
 
 ---------------------------------------------------------------------------------------------------
 
