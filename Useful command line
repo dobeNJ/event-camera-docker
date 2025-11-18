@@ -115,3 +115,13 @@ copy a file from a container to the host:
  ---> sudo docker cp <containerId>:/file/path/within/container /host/path/target
 
 
+=======================================================================================================
+-----------------------------------------------------------------------------------------------------
+commande line Git
+-----------------------------------------------------------------------------------------------------
+
+Initiate git reposetory inside the workplae :  git init 
+add to an existign repository : 
+git remote add origin https://github.com/dobeNJ/Creating-a-Synthetic-Shape-Dataset-SSD-.git
+add specific folder : git add *.py
+commit to github : git commit -m "Name-of-the-commit"
