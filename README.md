@@ -48,3 +48,17 @@ sudo docker run -it --rm --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:
 ```bash
 sudo docker run -it --rm --name test2 --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw"  --volume /Documents/Event-analysis/Camera:/workspace--privileged --device /dev/bus/usb:/dev/bus/usb custom-event-camera-image /bin/bash
 ```
+
+## start docker and save in the computer
+```bash
+sudo docker run -it --rm \
+  --name test2 \
+  --net=host \
+  --env DISPLAY=$DISPLAY \
+  --volume "$HOME/.Xauthority:/root/.Xauthority:rw" \
+  --volume "$HOME/prophesee_recording:/prophesee_recording" \
+  --privileged \
+  --device /dev/bus/usb:/dev/bus/usb \
+  custom-event-camera-image \
+  /bin/bash
+```
