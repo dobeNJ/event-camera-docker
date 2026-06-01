@@ -50,6 +50,15 @@ sudo docker run -it --rm --name test2 --net=host --env="DISPLAY" --volume="$HOME
 ```
 
 ## start docker and save in the computer
+The the file are saved in the mounted volume in the line --volume "$HOME/prophesee_recording:/prophesee_recording" \
+If I want to saved in another disk I can mount the volume is the same way as : --volume "/media/$USER/Extreme SSD/prophesee_recording:/prophesee_recording" \
+But first I need to creat the folder : 
+
+```bash
+mkdir -p "/media/$USER/Extreme SSD/prophesee_recording"
+chmod 777 "/media/$USER/Extreme SSD/prophesee_recording"
+```
+And then to creat container with name test2
 ```bash
 sudo docker run -it --rm \
   --name test2 \
