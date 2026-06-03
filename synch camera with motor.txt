@@ -6,4 +6,8 @@ the recording is triggered by camera.start_recording(filename_to_log_into) and s
 
 both called on SPACE key press
 
+The code is changed and saved in '/prophesee_viewer_modif' with name prophesee_viewer_patched.cpp
+
+
+
 
