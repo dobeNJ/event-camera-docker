@@ -1,0 +1,9 @@
+Inside : ' /usr/share/prophesee_driver/samples/prophesee_viewer'
+The file prophesee_viewer.cpp
+
+
+the recording is triggered by camera.start_recording(filename_to_log_into) and stopped with camera.stop_recording()
+
+both called on SPACE key press
+
+
