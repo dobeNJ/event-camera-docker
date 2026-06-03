@@ -8,6 +8,20 @@ both called on SPACE key press
 
 The code is changed and saved in '/prophesee_viewer_modif' with name prophesee_viewer_patched.cpp
 
+copy the file inside  inside rhe container : docker cp ...
+
+build the folder inside the container :
+docker exec -it test2 bash -c "
+  cd /usr/share/prophesee_driver/samples/prophesee_viewer &&
+  rm -rf build &&
+  mkdir -p build && cd build &&
+  cmake .. && make -j\$(nproc)
+"
+
+Then exect the file to record the event and move the motor : 
+the file is inside : /prophesee_3axis_cinetics , names 'record_motor_sync.py'
+
+
 
 
 
