@@ -1,0 +1,17 @@
+All the biais files: 
+
+docker exec test2 find /usr/share/prophesee_driver -name "*.bias" 2>/dev/null
+/usr/share/prophesee_driver/biases/gen3.1_EM.bias
+/usr/share/prophesee_driver/biases/gen3_high_frequency_settings.bias
+/usr/share/prophesee_driver/biases/gen4_EM_CD_only.bias
+/usr/share/prophesee_driver/biases/gen3.1_visioncam_v0.bias
+/usr/share/prophesee_driver/biases/gen3_low_bgnoise_settings.bias
+/usr/share/prophesee_driver/biases/gen3_EM.bias
+/usr/share/prophesee_driver/biases/gen4_CD.bias
+/usr/share/prophesee_driver/biases/gen3_sensitive_settings.bias
+/usr/share/prophesee_driver/biases/gen3.1_CD_standard.bias
+/usr/share/prophesee_driver/biases/gen3_EM_stdby.bias
+/usr/share/prophesee_driver/biases/gen3_counting.bias
+/usr/share/prophesee_driver/biases/gen3_visioncam_v0.bias
+/usr/share/prophesee_driver/biases/gen1_default.bias
+/usr/share/prophesee_driver/biases/gen3_stdby.bias
