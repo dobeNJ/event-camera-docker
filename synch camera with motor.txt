@@ -19,10 +19,8 @@ docker exec -it --user root test2 bash -c "
     libboost-system-dev libboost-filesystem-dev
 "
 
-Build inside the container:
 docker exec -it test2 bash -c "
   cd /usr/share/prophesee_driver/samples/prophesee_viewer &&
-  rm -rf build &&
   mkdir -p build && cd build &&
   cmake .. && make -j\$(nproc)
 "
