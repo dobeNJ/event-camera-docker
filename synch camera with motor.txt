@@ -8,8 +8,8 @@ Modification: The file is patched to listen for UNIX signals instead: SIGUSR1 st
 
 Copy the patched file into the container:
 
-docker cp /prophesee_viewer_modif/prophesee_viewer_patched.cpp \
-  test2:/usr/share/prophesee_driver/samples/prophesee_viewer/prophesee_viewer.cpp
+docker cp /home/doha/prophesee_viewer_modif/prophesee_viewer_patched.cpp   test2:/usr/share/prophesee_driver/samples/prophesee_viewer/prophesee_viewer.cpp
+
 
 Install build dependencies inside the container (required once — the container did not have CMake or Boost binary libraries pre-installed):
 
