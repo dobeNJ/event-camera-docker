@@ -85,3 +85,18 @@ sudo docker run -it --rm \
   custom-event-camera-image \
   /bin/bash
 ```
+
+## add build
+```bash
+sudo docker run -it --rm \
+  --name test2 \
+  --net=host \
+  --env DISPLAY=$DISPLAY \
+  --volume "$HOME/.Xauthority:/root/.Xauthority:rw" \
+  --volume "$HOME/prophesee_recording:/prophesee_recording" \
+  --volume "$HOME/prophesee_build:/usr/share/prophesee_driver/samples/prophesee_viewer/build" \
+  --privileged \
+  --volume /dev/bus/usb:/dev/bus/usb \
+  custom-event-camera-image \
+  /bin/bash
+```
