@@ -1,3 +1,33 @@
 A calibration-specific version that saves graylevel frames for checkerboard calibration . 
 the file name is prophesee_viewer_calib.cpp
 
+I creat another docker container called test_calib .
+
+Run : 
+docker cp prophesee_viewer_calib.cpp \
+  test_calib:/usr/share/prophesee_driver/samples/prophesee_viewer/prophesee_viewer.cpp
+
+Install dependecies : 
+docker exec -it --user root test_calib bash -c "
+  apt-get update &&
+  apt-get install -y cmake build-essential \
+    libboost-system-dev libboost-filesystem-dev
+"
+
+Make the file 
+docker exec -it test_calib bash -c "
+  cd /usr/share/prophesee_driver/samples/prophesee_viewer &&
+  mkdir -p build && cd build &&
+  cmake .. && make -j\$(nproc)
+"
+
+Test the to regetr fram : 
+docker exec -it test_calib env DISPLAY=$DISPLAY QT_X11_NO_MITSHM=1 NO_AT_BRIDGE=1 \
+  /usr/share/prophesee_driver/samples/prophesee_viewer/build/prophesee_viewer \
+  --calib-dir /prophesee_recording/calib_frames \
+  --calib-prefix calib
+
+after click to s to save frame
+
+the link where I took the checkboard :https://markhedleyjones.com/projects/calibration-checkerboard-collection
+
