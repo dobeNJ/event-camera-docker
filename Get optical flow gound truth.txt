@@ -1,0 +1,5 @@
+1. Calibrate pulses_per_mm
+2. Measure or set scene depth Z
+3. Get camera intrinsics fx, fy, cx, cy
+4. Add constant planar optical flow to H5
+5. Later improve with depth map if needed
